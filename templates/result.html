@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .survived {
+            color: #28a745;
+        }
+
+        .did-not-survive {
+            color: #dc3545;
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .home-button {
+            background-color: #0066cc;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        {% if prediction == 1 %}
+            <i class="fas fa-life-ring icon survived"></i>
+            <h1 class="survived">Survived</h1>
+            <p>The passenger survived the Titanic disaster.</p>
+        {% else %}
+            <i class="fas fa-times-circle icon did-not-survive"></i>
+            <h1 class="did-not-survive">Did Not Survive</h1>
+            <p>Unfortunately, the passenger did not survive the Titanic disaster.</p>
+        {% endif %}
+        <a href="/" class="home-button"><i class="fas fa-home icon"></i>Go Back to Home</a>
+    </div>
+</body>
+</html>
