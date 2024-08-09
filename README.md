@@ -16,11 +16,11 @@ This project is a web application for predicting survival outcomes on the Titani
 
 ### Input Form
 
-![Input Form](assets/form.png)
+![Input Form](assets/form)
 
 ### Prediction Results
 
-![Prediction Results](assets/result.png)
+![Prediction Results](assets/result)
 
 ## Getting Started
 
